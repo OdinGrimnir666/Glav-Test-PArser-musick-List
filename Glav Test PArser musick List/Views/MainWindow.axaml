@@ -1,0 +1,93 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Glav_Test_PArser_musick_List.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Glav_Test_PArser_musick_List.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Glav_Test_PArser_musick_List"
+		 xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia">
+	
+	
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+     </Design.DataContext>
+
+	<Grid ShowGridLines="True" >
+		<Grid.RowDefinitions>
+			<RowDefinition Height="300"></RowDefinition>
+			<RowDefinition Height="400"></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+		</Grid.ColumnDefinitions>
+		
+	
+		
+		<Grid  ShowGridLines="True" Grid.Row="0">
+	    <Grid.RowDefinitions>
+			<RowDefinition Height="200"></RowDefinition>
+			<RowDefinition Height="150"></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+		<ColumnDefinition Width="300"></ColumnDefinition>
+		<ColumnDefinition Width="200"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		
+		<StackPanel  Height="120" Margin="20" Grid.Row="1">
+			<TextBlock  Text="{Binding InfoPlylist.Model.PlaylistName}"/>
+			<TextBlock  Text="{Binding InfoPlylist.Model.ReleaseDate}"/>
+		</StackPanel>
+			<Image Width="300" Grid.Column="2" Grid.Row="1" asyncImageLoader:ImageLoader.Source="{Binding InfoPlylist.Model.AvatarImages}"></Image>
+		</Grid>
+		
+    <StackPanel Margin="10" Grid.Row="0" Grid.Column="0">
+        <TextBox  Text="{Binding ShownValue}"/>
+		 <Button Width="200"   Command="{Binding OnButtonClick}" Content="Show Plylist" ></Button>
+    </StackPanel>
+
+		
+
+		<ListBox Background="GreenYellow"  Width="1200" Grid.Row="1" Items="{Binding Plylist} ">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+						<Grid >
+							<Grid.RowDefinitions>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="80"></ColumnDefinition>
+								<ColumnDefinition Width="200"></ColumnDefinition>
+								<ColumnDefinition Width="100"></ColumnDefinition>
+								<ColumnDefinition Width="200"></ColumnDefinition>
+								<ColumnDefinition Width="400"></ColumnDefinition>
+								<ColumnDefinition Width="200"></ColumnDefinition>
+
+							</Grid.ColumnDefinitions>
+							
+	
+
+						<Image Height="80" Grid.Column="1" asyncImageLoader:ImageLoader.Source="{Binding Img}"></Image>
+
+					
+							<TextBlock  Height="40" Width="40" Grid.Column="0" Text="{Binding time}"></TextBlock>
+
+
+							<TextBlock  Height="50" Width="100" Grid.Column="2" Text="{Binding NameArtist}"></TextBlock>
+
+							<TextBlock Height="40" Width="150" Grid.Column="3" Text="{Binding RecordLabel}"></TextBlock>
+							<TextBlock Height="50" Width="150" Grid.Column="4" Text="{Binding NameMusic}"></TextBlock>
+
+							<TextBlock Height="40" Width="150" Grid.Column="5" Text="{Binding NameAlbom}"></TextBlock>
+
+
+
+
+						</Grid>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+			
+	</Grid>
+
+</Window>
