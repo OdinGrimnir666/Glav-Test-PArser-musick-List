@@ -27,7 +27,7 @@ namespace Glav_Test_PArser_musick_List.ViewModels
         }
 
 
-        public void OnButtonClick(object sender, RoutedEventArgs e)
+        public void ButtonClick()
         {
              
              InfoPlylist = new ParseMusic(Url);
