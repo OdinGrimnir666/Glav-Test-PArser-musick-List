@@ -44,7 +44,7 @@
 		
     <StackPanel Margin="10" Grid.Row="0" Grid.Column="0">
         <TextBox  Text="{Binding ShownValue}"/>
-		 <Button Width="200"   Command="{Binding OnButtonClick}" Content="Show Plylist" ></Button>
+		 <Button Width="200"   Command="{Binding ButtonClick}" Content="Show Plylist" ></Button>
     </StackPanel>
 
 		
