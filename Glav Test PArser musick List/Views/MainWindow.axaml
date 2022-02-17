@@ -15,7 +15,7 @@
         <vm:MainWindowViewModel/>
      </Design.DataContext>
 
-	<Grid ShowGridLines="True" >
+	<Grid >
 		<Grid.RowDefinitions>
 			<RowDefinition Height="300"></RowDefinition>
 			<RowDefinition Height="400"></RowDefinition>
@@ -25,7 +25,7 @@
 		
 	
 		
-		<Grid  ShowGridLines="True" Grid.Row="0">
+		<Grid  Grid.Row="0">
 	    <Grid.RowDefinitions>
 			<RowDefinition Height="200"></RowDefinition>
 			<RowDefinition Height="150"></RowDefinition>
@@ -36,15 +36,16 @@
 		</Grid.ColumnDefinitions>
 		
 		<StackPanel  Height="120" Margin="20" Grid.Row="1">
-			<TextBlock  Text="{Binding InfoPlylist.Model.PlaylistName}"/>
-			<TextBlock  Text="{Binding InfoPlylist.Model.ReleaseDate}"/>
+			<TextBlock  Text="{Binding Plylistinfo.PlaylistName}"/>
+			<TextBlock   Text="{Binding Plylistinfo.ReleaseDate}"/>
 		</StackPanel>
-			<Image Width="300" Grid.Column="2" Grid.Row="1" asyncImageLoader:ImageLoader.Source="{Binding InfoPlylist.Model.AvatarImages}"></Image>
+			<Image Width="300" Grid.Column="2" Grid.Row="1" asyncImageLoader:ImageLoader.Source="{Binding Plylistinfo.AvatarImages}"></Image>
 		</Grid>
 		
     <StackPanel Margin="10" Grid.Row="0" Grid.Column="0">
-        <TextBox  Text="{Binding ShownValue}"/>
-		 <Button Width="200"   Command="{Binding ButtonClick}" Content="Show Plylist" ></Button>
+        <TextBox Grid.Column="1"  Text="{Binding ShownValue}"></TextBox>
+		
+		 <Button Width="200"   Command="{Binding OnButtonClick}" Content="Show Plylist" ></Button>
     </StackPanel>
 
 		
