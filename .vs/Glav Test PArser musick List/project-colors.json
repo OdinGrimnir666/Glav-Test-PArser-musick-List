@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "25eae108-6df0-4f5a-9a91-e4614fe4cdbb": {
+      "ProjectGuid": "25eae108-6df0-4f5a-9a91-e4614fe4cdbb",
+      "DisplayName": "Glav Test PArser musick List",
+      "ColorIndex": 0
+    },
+    "b868547c-380e-4061-9326-8b8b3464c547": {
+      "ProjectGuid": "b868547c-380e-4061-9326-8b8b3464c547",
+      "DisplayName": "PArse Musik list Liba Net Standar 2.0",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}
